@@ -183,10 +183,10 @@ startTime | endTime | logId| logExceptionSegment | logBelongTo | logBelongLevel
 - 故障根因诊断运行效果分两个部分：打印结果和存储结果
 故障根因诊断打印结果：
 
-![截图](https://github.com/yymgithub/fault_diagnosis_and_repair/blob/main/effect_images/%E6%95%85%E9%9A%9C%E6%A0%B9%E5%9B%A0%E8%AF%8A%E6%96%AD%E6%89%93%E5%8D%B0%E7%BB%93%E6%9E%9C.png?raw=true)
+![截图](https://github.com/yymgithub/AIOsp-Fault-Diagnosis/tree/main/effect_images/%E6%95%85%E9%9A%9C%E6%A0%B9%E5%9B%A0%E8%AF%8A%E6%96%AD%E6%89%93%E5%8D%B0%E7%BB%93%E6%9E%9C.png?raw=true)
 
 >故障服务列表是在多个异常服务中识别出的故障服务列表，key为服务Id <br>
->XXX服务故障根因列表是该故障服务的根因指标、日志列表，key为指标Id或日志Id
+>XXX服务故障根因列表是该故障服务的根因指标、日志列表，key为指标或日志名称
 具体存储结果可依据数据库SQl查看
 - web接口返回值为Json
 - 修复方案生成直接生成修复方案存储到mysql
