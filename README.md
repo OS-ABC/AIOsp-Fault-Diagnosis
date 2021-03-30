@@ -183,7 +183,7 @@ startTime | endTime | logId| logExceptionSegment | logBelongTo | logBelongLevel
 - 故障根因诊断运行效果分两个部分：打印结果和存储结果
 故障根因诊断打印结果：
 
-![截图](https://github.com/yymgithub/AIOsp-Fault-Diagnosis/tree/main/effect_images/1.png?raw=true)
+![截图](https://github.com/yymgithub/AIOsp-Fault-Diagnosis/blob/main/effect_images/1.png?raw=true)
 
 >故障服务列表是在多个异常服务中识别出的故障服务列表，key为服务Id <br>
 >XXX服务故障根因列表是该故障服务的根因指标、日志列表，key为指标或日志名称
