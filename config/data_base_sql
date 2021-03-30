@@ -1,0 +1,67 @@
+create table exception_data_dependency_graph
+(
+    id          int auto_increment
+        primary key,
+    fault_id    int                                not null,
+    graph_json  text                               not null,
+    create_time datetime default CURRENT_TIMESTAMP not null,
+    update_time datetime default CURRENT_TIMESTAMP not null
+)
+    comment '服务异常数据依赖图存储表';
+
+create table fault_service
+(
+    id                 int auto_increment
+        primary key,
+    fault_service_id   varchar(255)                       not null comment '故障服务ID',
+    fault_service_name varchar(255)                       null,
+    fault_service_type varchar(255)                       null,
+    host_name          varchar(255)                       null,
+    exception_time     datetime                           null,
+    process_state      int      default 0                 not null,
+    create_time        datetime default CURRENT_TIMESTAMP not null,
+    update_time        datetime default CURRENT_TIMESTAMP not null
+)
+    comment '故障服务详情表';
+
+create table fault_service_root_detail
+(
+    id           int auto_increment
+        primary key,
+    fault_id     int                                not null,
+    causeOfFault varchar(255)                       not null comment '根因ID',
+    causeName    varchar(255)                       not null comment '根因名称',
+    detail       text                               null comment '根因内容',
+    has_solution int      default 0                 not null,
+    type         int      default 0                 null comment '0:指标 1:日志',
+    `rank`       int                                not null comment '根因排序',
+    create_time  datetime default CURRENT_TIMESTAMP not null,
+    update_time  datetime default CURRENT_TIMESTAMP not null
+)
+    comment '故障服务根因详情表';
+
+create table fault_service_solution
+(
+    id             int auto_increment
+        primary key,
+    fault_id       int                                not null,
+    root_log_id    varchar(255)                       not null,
+    fault_reason   text                               null,
+    fault_solution text                               not null,
+    `rank`         int                                not null,
+    create_time    datetime default CURRENT_TIMESTAMP not null,
+    update_time    datetime default CURRENT_TIMESTAMP not null
+)
+    comment '故障服务修复方案详情表';
+
+create table service_dependency_graph
+(
+    id          int auto_increment
+        primary key,
+    fault_id    int                                not null,
+    graph_json  text                               not null,
+    create_time datetime default CURRENT_TIMESTAMP not null,
+    update_time datetime default CURRENT_TIMESTAMP not null
+)
+    comment '服务依赖图存储表';
+
