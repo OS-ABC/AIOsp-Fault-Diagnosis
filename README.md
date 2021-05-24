@@ -9,8 +9,7 @@
 - 异常日志根源辅助分析：基于日志匹配分析异常日志可能的原因及解决方案
 
 整体定位流程图如下：
-![](./effect_images/示意图.png)
-<img src="./effect_images/示意图.png" alt="示意图" width="70%" height="70%" />
+<img src="./effect_images/示意图.png" alt="示意图" width="70%" height="70%" align=center/>
 ### Install
 ```
 pip install -r requirements.txt
