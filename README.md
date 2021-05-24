@@ -10,7 +10,7 @@
 
 整体定位流程图如下：
 ![](./effect_images/示意图.png)
-<img src="./effect_images/示意图.png" alt="示意图" style="zoom:50%;" />
+<img src="./effect_images/示意图.png" alt="示意图" width="50%" height="50%" />
 <img src="https://github.com/yymgithub/AIOsp-Fault-Diagnosis/blob/main/effect_images/%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="示意图" style="zoom:50%;" />
 
 ### Install
