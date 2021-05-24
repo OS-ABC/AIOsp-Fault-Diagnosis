@@ -13,7 +13,7 @@
 
 整体定位流程图如下：
 
-<img src="./effect_images/示意图.png" alt="示意图" width="70%" height="70%" align=center/>
+<img src="./effect_images/结构示意图.png" alt="示意图" width="70%" height="70%" align=center/>
 
 ### Install
 ```
